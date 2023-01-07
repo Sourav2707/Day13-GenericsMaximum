@@ -17,7 +17,7 @@ public class Main {
                     arr1[i] = scanner.nextInt();
                 }
                 maximum = new Maximum(arr1);
-                System.out.println(maximum.findMaximum()+" is maximum");
+                maximum.findMaximum();
                 menu();
                 break;
             case 2:
@@ -29,7 +29,7 @@ public class Main {
                     arr2[i] = scanner.nextFloat();
                 }
                 maximum = new Maximum(arr2);
-                System.out.println(maximum.findMaximum()+" is maximum");
+                maximum.findMaximum();
                 menu();
                 break;
             case 3:
@@ -41,7 +41,7 @@ public class Main {
                     arr3[i] = scanner.next();
                 }
                 maximum = new Maximum(arr3);
-                System.out.println(maximum.findMaximum()+" is maximum");
+                maximum.findMaximum();
                 menu();
                 break;
             case 4:
