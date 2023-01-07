@@ -10,9 +10,12 @@ public void testFindMaximum() throws Exception {
     Maximum maximum = new Maximum();
     int value1 = maximum.findMaximum(10, 20, 30);
     double value2 = maximum.findMaximum(1.123f, 1.213f, 1.321f);
+    String value3 = maximum.findMaximum("cba", "bac", "abc");
     int expected1 = 30;
     float expected2 = 1.321f;
+    String expected3 = "cba";
     Assert.assertEquals(expected1, value1);
     Assert.assertEquals(expected2, value2, 0.0f);
+    Assert.assertEquals(expected3, value3);
 }
 }

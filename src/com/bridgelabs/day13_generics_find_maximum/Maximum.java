@@ -26,4 +26,16 @@ public class Maximum {
         }
         return max;
     }
+    public String findMaximum(String a, String b, String c) {
+        String max;
+        if(a.compareTo(b) > 0 && a.compareTo(c) > 0) {
+            max = a;
+        }
+        else if(b.compareTo(a) > 0 && b.compareTo(c) > 0) {
+            max = b;
+        } else {
+            max = c;
+        }
+        return max;
+    }
 }

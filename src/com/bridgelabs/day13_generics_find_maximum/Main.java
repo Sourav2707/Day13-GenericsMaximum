@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Maximum maximum = new Maximum();
-        System.out.println("Menu 1.Find Maximum Integer 2. Find Maximum Float");
+        System.out.println("Menu 1.Find Maximum Integer 2. Find Maximum Float 3. Find Maximum String");
         int option = scanner.nextInt();
         switch (option) {
             case 1:
@@ -26,6 +26,16 @@ public class Main {
                 System.out.println("c:");
                 f = scanner.nextFloat();
                 System.out.println(maximum.findMaximum(d, e, f)+" is maximum of "+d+","+e+","+f);
+                break;
+            case 3:
+                String g, h, i;
+                System.out.println("In order to find maximum of three integers, enter the values\na:");
+                g= scanner.next();
+                System.out.println("b:");
+                h = scanner.next();
+                System.out.println("c:");
+                i = scanner.next();
+                System.out.println(maximum.findMaximum(g, h, i)+" is maximum of "+g+","+h+","+i);
                 break;
             default:
                 System.out.println("Invalid option");
