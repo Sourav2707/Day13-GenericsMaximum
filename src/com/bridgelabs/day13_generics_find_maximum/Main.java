@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void menu() {
         Scanner scanner = new Scanner(System.in);
-        Maximum maximum = new Maximum();
+        Maximum maximum;
         System.out.println("Menu 1.Find Maximum Integer 2. Find Maximum Float 3. Find Maximum String 4. Exit");
         int option = scanner.nextInt();
         switch (option) {
@@ -15,7 +15,8 @@ public class Main {
                 b = scanner.nextInt();
                 System.out.println("c:");
                 c = scanner.nextInt();
-                System.out.println(maximum.findMaximum(a, b, c)+" is maximum of "+a+","+b+","+c);
+                maximum = new Maximum(a, b, c);
+                System.out.println(maximum.findMaximum()+" is maximum of "+a+","+b+","+c);
                 menu();
                 break;
             case 2:
@@ -26,7 +27,8 @@ public class Main {
                 e = scanner.nextFloat();
                 System.out.println("c:");
                 f = scanner.nextFloat();
-                System.out.println(maximum.findMaximum(d, e, f)+" is maximum of "+d+","+e+","+f);
+                maximum = new Maximum(d, e, f);
+                System.out.println(maximum.findMaximum()+" is maximum of "+d+","+e+","+f);
                 menu();
                 break;
             case 3:
@@ -37,7 +39,8 @@ public class Main {
                 h = scanner.next();
                 System.out.println("c:");
                 i = scanner.next();
-                System.out.println(maximum.findMaximum(g, h, i)+" is maximum of "+g+","+h+","+i);
+                maximum = new Maximum(g, h, i);
+                System.out.println(maximum.findMaximum()+" is maximum of "+g+","+h+","+i);
                 menu();
                 break;
             case 4:
