@@ -8,15 +8,18 @@ public class MaximumTest<T extends Comparable> //as per uc we have extended comp
     //I'm goind to give 10, 20, 30
 @Test
 public void testFindMaximum() throws Exception {
-    Maximum maximum1 = new Maximum(10, 20, 30);
-    int value1 = (int) maximum1.findMaximum(); //type casting as we are getting object return from comparable
-    Maximum maximum2 = new Maximum(1.123f, 1.213f, 1.321f);
+    Integer[] array1 = {10, 20, 30, 40, 50};
+    Float[] array2 = {1.123f, 1.213f, 1.321f, 1.432f, 1.342f};
+    String[] array3 = {"cba", "bac", "abc", "dbc", "dcb"};
+    Maximum maximum1 = new Maximum(array1);
+    int value1 = (int) maximum1.findMaximum();
+    Maximum maximum2 = new Maximum(array2);
     float value2 = (float) maximum2.findMaximum();
-    Maximum maximum3 = new Maximum("cba", "bac", "abc");
+    Maximum maximum3 = new Maximum(array3);
     String value3 = (String) maximum3.findMaximum();
-    int expected1 = 30;
-    float expected2 = 1.321f;
-    String expected3 = "cba";
+    int expected1 = 50;
+    float expected2 = 1.432f;
+    String expected3 = "dcb";
     Assert.assertEquals(expected1, value1);
     Assert.assertEquals(expected2, value2, 0.0f);
     Assert.assertEquals(expected3, value3);

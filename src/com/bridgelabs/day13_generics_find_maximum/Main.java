@@ -6,41 +6,42 @@ public class Main {
         Maximum maximum;
         System.out.println("Menu 1.Find Maximum Integer 2. Find Maximum Float 3. Find Maximum String 4. Exit");
         int option = scanner.nextInt();
+        int n = 0;
         switch (option) {
             case 1:
-                int a, b, c;
-                System.out.println("In order to find maximum of three integers, enter the values\na:");
-                a= scanner.nextInt();
-                System.out.println("b:");
-                b = scanner.nextInt();
-                System.out.println("c:");
-                c = scanner.nextInt();
-                maximum = new Maximum(a, b, c);
-                System.out.println(maximum.findMaximum()+" is maximum of "+a+","+b+","+c);
+                System.out.println("Enter the range to find max Integer");
+                n = scanner.nextInt();
+                Integer[] arr1 = new Integer[n];
+                for(int i = 0; i < arr1.length; i++) {
+                    System.out.println("Enter the values");
+                    arr1[i] = scanner.nextInt();
+                }
+                maximum = new Maximum(arr1);
+                System.out.println(maximum.findMaximum()+" is maximum");
                 menu();
                 break;
             case 2:
-                float d, e, f;
-                System.out.println("In order to find maximum of three integers, enter the values\na:");
-                d= scanner.nextFloat();
-                System.out.println("b:");
-                e = scanner.nextFloat();
-                System.out.println("c:");
-                f = scanner.nextFloat();
-                maximum = new Maximum(d, e, f);
-                System.out.println(maximum.findMaximum()+" is maximum of "+d+","+e+","+f);
+                System.out.println("Enter the range to find max Float");
+                n = scanner.nextInt();
+                Float[] arr2 = new Float[n];
+                for(int i = 0; i < arr2.length; i++) {
+                    System.out.println("Enter the values");
+                    arr2[i] = scanner.nextFloat();
+                }
+                maximum = new Maximum(arr2);
+                System.out.println(maximum.findMaximum()+" is maximum");
                 menu();
                 break;
             case 3:
-                String g, h, i;
-                System.out.println("In order to find maximum of three integers, enter the values\na:");
-                g= scanner.next();
-                System.out.println("b:");
-                h = scanner.next();
-                System.out.println("c:");
-                i = scanner.next();
-                maximum = new Maximum(g, h, i);
-                System.out.println(maximum.findMaximum()+" is maximum of "+g+","+h+","+i);
+                System.out.println("Enter the range to find max String");
+                n = scanner.nextInt();
+                String[] arr3 = new String[n];
+                for(int i = 0; i < arr3.length; i++) {
+                    System.out.println("Enter the values");
+                    arr3[i] = scanner.next();
+                }
+                maximum = new Maximum(arr3);
+                System.out.println(maximum.findMaximum()+" is maximum");
                 menu();
                 break;
             case 4:
