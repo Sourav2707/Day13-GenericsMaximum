@@ -1,10 +1,10 @@
 package com.bridgelabs.day13_generics_find_maximum;
 import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
+    public static void menu() {
         Scanner scanner = new Scanner(System.in);
         Maximum maximum = new Maximum();
-        System.out.println("Menu 1.Find Maximum Integer 2. Find Maximum Float 3. Find Maximum String");
+        System.out.println("Menu 1.Find Maximum Integer 2. Find Maximum Float 3. Find Maximum String 4. Exit");
         int option = scanner.nextInt();
         switch (option) {
             case 1:
@@ -16,6 +16,7 @@ public class Main {
                 System.out.println("c:");
                 c = scanner.nextInt();
                 System.out.println(maximum.findMaximum(a, b, c)+" is maximum of "+a+","+b+","+c);
+                menu();
                 break;
             case 2:
                 float d, e, f;
@@ -26,6 +27,7 @@ public class Main {
                 System.out.println("c:");
                 f = scanner.nextFloat();
                 System.out.println(maximum.findMaximum(d, e, f)+" is maximum of "+d+","+e+","+f);
+                menu();
                 break;
             case 3:
                 String g, h, i;
@@ -36,10 +38,17 @@ public class Main {
                 System.out.println("c:");
                 i = scanner.next();
                 System.out.println(maximum.findMaximum(g, h, i)+" is maximum of "+g+","+h+","+i);
+                menu();
+                break;
+            case 4:
+                System.exit(0);
                 break;
             default:
                 System.out.println("Invalid option");
                 break;
         }
+    }
+    public static void main(String[] args) {
+        Main.menu();
     }
 }

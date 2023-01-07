@@ -1,8 +1,9 @@
 package com.bridgelabs.day13_generics_find_maximum;
 
 public class Maximum {
-    public int findMaximum(Integer a, Integer b, Integer c) {
-        int max = 0;
+    public <T extends Comparable> T findMaximum(T a, T b, T c)
+    {
+        T max;
         if(a.compareTo(b) > 0 && a.compareTo(c) > 0) {
             max = a;
         }
@@ -13,29 +14,5 @@ public class Maximum {
         }
         return max;
     }
-    //method overloading with different dataType
-    public float findMaximum(Float a, Float b, Float c) {
-        float max = 0.0f;
-        if(a.compareTo(b) > 0 && a.compareTo(c) > 0) {
-            max = a;
-        }
-        else if(b.compareTo(a) > 0 && b.compareTo(c) > 0) {
-            max = b;
-        } else {
-            max = c;
-        }
-        return max;
-    }
-    public String findMaximum(String a, String b, String c) {
-        String max;
-        if(a.compareTo(b) > 0 && a.compareTo(c) > 0) {
-            max = a;
-        }
-        else if(b.compareTo(a) > 0 && b.compareTo(c) > 0) {
-            max = b;
-        } else {
-            max = c;
-        }
-        return max;
-    }
+
 }

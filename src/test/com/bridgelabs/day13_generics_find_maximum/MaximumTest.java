@@ -1,4 +1,4 @@
-package test.com.bridgelabs.day13_generics_find_maximum; 
+package test.com.bridgelabs.day13_generics_find_maximum;
 
 import com.bridgelabs.day13_generics_find_maximum.Maximum;
 import org.junit.Assert;
