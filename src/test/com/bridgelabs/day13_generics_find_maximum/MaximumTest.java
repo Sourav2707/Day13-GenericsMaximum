@@ -8,7 +8,7 @@ public class MaximumTest {
 @Test
 public void testFindMaximum() throws Exception {
     Maximum maximum = new Maximum();
-    int value = maximum.findMaximum(20, 30, 10);
+    int value = maximum.findMaximum(10, 20, 30);
     int expected = 30;
     Assert.assertEquals(expected, value);
 } 
